@@ -2,43 +2,35 @@ package cphbusiness.test.sp1.triangle;
 
 public class Triangle {
 
-	private final static double a = 3;
-	private final static double b = 1;
-	private final static double c = 2;
+	private double a;
+	private double b;
+	private double c;
 
-	public static void main(String[] args) {
-		if (a * b * c > 0) {
-			if (isTriangleEqu(a, b, c)) {
-				System.out.println("equilateral");
-			}
-			if (isTriangleIso(a, b, c)) {
-				System.out.println("isosceles");
-			}
-			if (isTriangleSca(a, b, c)) {
-				System.out.println("scalene");
-			}
-		}
-
+	public Triangle(double a, double b, double c) {
+		this.a = a;
+		this.b = b;
+		this.c = c;
 	}
 
-	private static boolean isTriangleSca(double a2, double b2, double c2) {
-		if ((a2 != b2) && (a2 != c2) && (b2 != c2))
+	public boolean isTriangleSca() {
+		if ((this.a != this.b) && (this.a != this.c) && (this.b != this.c))
 			return true;
 
 		return false;
 	}
 
-	private static boolean isTriangleIso(double a2, double b2, double c2) {
-		if (((a2 == b2) && (a2 != c2)) || ((a2 == c2) && (a2 != b2)) || ((b2 == c2) && (b2 != a2)))
+	public boolean isTriangleIso() {
+		if (((this.a == this.b) && (this.a != this.c)) || ((this.a == this.c) && (this.a != this.b)) || ((this.b == this.c) && (this.b != this.a)))
 			return true;
 		return false;
 	}
 
-	private static boolean isTriangleEqu(double a2, double b2, double c2) {
-		if (a2 == b2 && a2 == c2) {
+	public boolean isTriangleEqu() {
+		if (this.a == this.b && this.a == this.c) {
 			return true;
 		}
 		return false;
 	}
+
 
 }
