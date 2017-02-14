@@ -2,14 +2,14 @@ package cphbusiness.test.sp1.triangle;
 
 public class Game {
 
-	private final static double a = 1;
-	private final static double b = 1;
-	private final static double c = 1;
+	private static final double a = 1;
+	private static final double b = 1;
+	private static final double c = 1;
 
 	public static void main(String[] args) {
 		if (a * b * c > 0) {
 			Triangle t = new Triangle(a, b, c);
-			
+
 			if (t.isTriangleEqu()) {
 				System.out.println("equilateral");
 			}
@@ -22,7 +22,5 @@ public class Game {
 		}
 
 	}
-
-	
 
 }

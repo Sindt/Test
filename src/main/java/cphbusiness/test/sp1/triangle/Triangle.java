@@ -2,9 +2,9 @@ package cphbusiness.test.sp1.triangle;
 
 public class Triangle {
 
-	private double a;
-	private double b;
-	private double c;
+	private final double a;
+	private final double b;
+	private final double c;
 
 	public Triangle(double a, double b, double c) {
 		this.a = a;
@@ -13,14 +13,15 @@ public class Triangle {
 	}
 
 	public boolean isTriangleSca() {
-		if ((this.a != this.b) && (this.a != this.c) && (this.b != this.c))
+		if ((this.a != this.b) && (this.a != this.c) && (this.b != this.c)) {
 			return true;
-
+		}
 		return false;
 	}
 
 	public boolean isTriangleIso() {
-		if (((this.a == this.b) && (this.a != this.c)) || ((this.a == this.c) && (this.a != this.b)) || ((this.b == this.c) && (this.b != this.a)))
+		if (((this.a == this.b) && (this.a != this.c)) || ((this.a == this.c) && (this.a != this.b))
+				|| ((this.b == this.c) && (this.b != this.a)))
 			return true;
 		return false;
 	}
@@ -31,6 +32,5 @@ public class Triangle {
 		}
 		return false;
 	}
-
 
 }
