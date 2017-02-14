@@ -1,0 +1,15 @@
+1)
+En erklæring per linie:
+int level; 
+int size;
+
+foretrækkes frem for:
+int level, size;
+
+2)
+File encoding: UTF-8
+
+3)
+Logisk orden for klassens indhold (nyeste metoder SKAL ikke være nederst i klassen, men der hvor de er logiske)
+
+
