@@ -1,2 +1,2 @@
 # Test-Triangle
-<a href="/test.txt">Hello</a>
+<a href="/tests.txt">Hello</a>
